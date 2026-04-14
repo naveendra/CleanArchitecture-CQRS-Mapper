@@ -1,4 +1,5 @@
 ﻿
+using Application.Application.Common.Mappings;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Application.Application.DependencyInjection
 
             // Services
             //services.AddScoped<IEmployeeService, EmployeeService>();
-            
+            services.AddAutoMapper(typeof(EmployeeProfile));
 
             return services;
         }
