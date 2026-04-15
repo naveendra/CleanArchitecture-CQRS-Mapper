@@ -2,8 +2,9 @@
   <Folder Name="/Solution Items/">
     <File Path="Readme.txt" />
   </Folder>
-  <Project Path="Application.API/Application.API.csproj" />
-  <Project Path="Application.Application/Application.Application.csproj" Id="efd1b579-7bd3-42f1-ae87-be25ec872246" />
-  <Project Path="Application.Domain/Application.Domain.csproj" Id="df5ea9c6-0329-434d-beb6-b2083ec53e19" />
-  <Project Path="Application.Infrastructure/Application.Infrastructure.csproj" Id="b860fdb7-69f1-4783-bcbe-a66b338a86fd" />
+  <Project Path="../../../../../../Desktop/GitHub/CleanArchitecture-CQRS-Mapper/CleanArchitecture-CQRS-Mapper/Application/Application.API/Application.API.csproj" />
+  <Project Path="../../../../../../Desktop/GitHub/CleanArchitecture-CQRS-Mapper/CleanArchitecture-CQRS-Mapper/Application/Application.Application/Application.Application.csproj" Id="efd1b579-7bd3-42f1-ae87-be25ec872246" />
+  <Project Path="../../../../../../Desktop/GitHub/CleanArchitecture-CQRS-Mapper/CleanArchitecture-CQRS-Mapper/Application/Application.Domain/Application.Domain.csproj" Id="df5ea9c6-0329-434d-beb6-b2083ec53e19" />
+  <Project Path="../../../../../../Desktop/GitHub/CleanArchitecture-CQRS-Mapper/CleanArchitecture-CQRS-Mapper/Application/Application.Infrastructure/Application.Infrastructure.csproj" Id="b860fdb7-69f1-4783-bcbe-a66b338a86fd" />
+  <Project Path="../../../../../../Desktop/GitHub/CleanArchitecture-CQRS-Mapper/CleanArchitecture-CQRS-Mapper/Application/Application.test/Application.test.csproj" Id="ae894f7c-5070-46c0-b235-aac0557646b9" />
 </Solution>

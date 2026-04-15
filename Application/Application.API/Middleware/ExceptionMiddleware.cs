@@ -1,6 +1,7 @@
 ﻿using Application.API.Models;
 using System.Net;
 using System.Text.Json;
+using FluentValidation;
 
 namespace Application.API.Middleware
 {
@@ -33,17 +34,24 @@ namespace Application.API.Middleware
         {
             var statusCode = ex switch
             {
+                ValidationException => HttpStatusCode.BadRequest,
                 ArgumentException => HttpStatusCode.BadRequest,
                 KeyNotFoundException => HttpStatusCode.NotFound,
                 UnauthorizedAccessException => HttpStatusCode.Unauthorized,
                 _ => HttpStatusCode.InternalServerError
             };
 
+            var errors = ex is ValidationException validationEx
+                ? validationEx.Errors.Select(e => e.ErrorMessage).ToList()
+                : statusCode == HttpStatusCode.InternalServerError
+                ? new List<string> { "An unexpected error occurred." }
+                : new List<string> { ex.Message };
+
             var response = new
             {
-                title = "An error occurred",
+                success = false,
                 status = (int)statusCode,
-                detail = ex.Message,
+                errors,
                 traceId = context.TraceIdentifier
             };
 
