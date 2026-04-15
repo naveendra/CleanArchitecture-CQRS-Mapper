@@ -19,7 +19,7 @@ namespace Application.Application.Features.Employees.Commands.UpdateEmployee
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
+        public async Task Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
         {
             var employee = await _repository.GetByIdAsync(request.Id);
 
@@ -37,7 +37,7 @@ namespace Application.Application.Features.Employees.Commands.UpdateEmployee
 
             await _repository.UpdateAsync(employee);
 
-            return Unit.Value;
+            
         }
     }
 }

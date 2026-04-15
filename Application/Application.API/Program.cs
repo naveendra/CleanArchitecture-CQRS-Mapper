@@ -1,13 +1,4 @@
-using Application.API.Filters;
-using Application.API.Middleware;
-using Application.API.Validators;
-using Application.Application.Interfaces.Repositories;
-using Application.Infrastructure.Persistence.Context;
-using Application.Infrastructure.Persistence.Repositories;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 using Application.Application.DependencyInjection;
 using Application.Infrastructure.DependencyInjection;
 using Application.API.Extensions;

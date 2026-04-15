@@ -17,7 +17,7 @@ namespace Application.Application.Features.Employees.Commands.CreateEmployee
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(CreateEmployeeCommand request, CancellationToken cancellationToken)
+        public async Task Handle(CreateEmployeeCommand request, CancellationToken cancellationToken)
         {
             var employee =  _mapper.Map<Employee>(request);
             //var employee = new Employee
@@ -32,7 +32,7 @@ namespace Application.Application.Features.Employees.Commands.CreateEmployee
 
             await _repository.AddAsync(employee);
 
-            return Unit.Value;
+            
         }
     }
 }

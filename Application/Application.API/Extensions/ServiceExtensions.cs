@@ -1,9 +1,5 @@
 ﻿using Application.API.Filters;
-using Application.API.Validators;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
-
 namespace Application.API.Extensions
 {
     public static class ServiceExtensions
@@ -20,9 +16,6 @@ namespace Application.API.Extensions
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
 
-            //ffluentValidation
-            services.AddFluentValidationAutoValidation();
-            services.AddValidatorsFromAssemblyContaining<CreateEmployeeDtoValidator>();
 
             services.Configure<ApiBehaviorOptions>(options =>
             {

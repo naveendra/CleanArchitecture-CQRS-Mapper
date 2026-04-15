@@ -15,10 +15,10 @@ namespace Application.Application.Features.Employees.Commands.DeleteEmployee
             _repository = repository;
         }
 
-        public async Task<Unit> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
+        public async Task Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
         {
             await _repository.DeleteAsync(request.Id);
-            return Unit.Value;
+            
         }
     }
 }
